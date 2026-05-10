@@ -72,8 +72,8 @@ export function Modules() {
   return (
     <section
       id="modules"
+      className="dark-section"
       style={{
-        backgroundColor: 'var(--color-paper)',
         paddingTop: 'clamp(5rem, 10vw, 9rem)',
         paddingBottom: 'clamp(5rem, 10vw, 9rem)',
       }}

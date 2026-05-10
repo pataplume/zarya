@@ -6,7 +6,7 @@ export function Promesse() {
     <section
       id="promesse"
       style={{
-        backgroundColor: 'var(--color-paper-2)',
+        backgroundColor: 'var(--color-paper)',
         paddingTop: 'clamp(5rem, 10vw, 9rem)',
         paddingBottom: 'clamp(5rem, 10vw, 9rem)',
       }}

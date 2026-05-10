@@ -24,13 +24,6 @@ const guarantees = [
     ],
   },
   {
-    label: 'SOUVERAINETÉ',
-    items: [
-      'Option d’hébergement 100 % Suisse en Phase 2026',
-      '(Apertus EPFL, infrastructure Infomaniak).',
-    ],
-  },
-  {
     label: 'ACCÈS',
     items: [
       'Authentification multi-facteurs.',
@@ -45,7 +38,7 @@ export function Securite() {
     <section
       id="securite"
       style={{
-        backgroundColor: 'var(--color-paper-2)',
+        backgroundColor: 'var(--color-paper)',
         paddingTop: 'clamp(5rem, 10vw, 9rem)',
         paddingBottom: 'clamp(5rem, 10vw, 9rem)',
       }}
@@ -72,7 +65,7 @@ export function Securite() {
                   letterSpacing: '-0.01em',
                 }}
               >
-                Vos données restent en Europe. Et bientôt, en Suisse.
+                Vos données restent en Europe.
               </h2>
               <p className="font-body text-ink-2 text-body leading-[1.6] max-w-[52ch]">
                 Nous traitons des données fiduciaires. C&apos;est-à-dire : des données financières,
@@ -84,7 +77,7 @@ export function Securite() {
             {/* ─── Garanties ─── */}
             <div className="lg:col-span-7">
               <dl className="space-y-6">
-                {guarantees.map((g, i) => (
+                {guarantees.map((g) => (
                   <div
                     key={g.label}
                     className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-2 sm:gap-8 pt-6 border-t border-stone-200 first:border-t-0 first:pt-0"

@@ -8,8 +8,8 @@
   --font-code: var(--font-jetbrains-mono), ui-monospace, monospace;
 
   /* Backgrounds */
-  --color-paper: #FAFAF7;
-  --color-paper-2: #F4F2EC;
+  --color-paper: #FFFFFF;
+  --color-paper-2: #F6F6F4;
   --color-ink: #1A1A1A;
   --color-ink-2: #3A3A3A;
   --color-muted: #6B6B66;
@@ -53,6 +53,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "kern", "liga", "tnum";
+}
+
+/* ─── Dark sections ──────────────────────────────── */
+/* Override CSS variables so all utility classes adapt automatically */
+.dark-section {
+  --color-ink: #FFFFFF;
+  --color-ink-2: rgba(255, 255, 255, 0.70);
+  --color-muted: rgba(255, 255, 255, 0.45);
+  --color-stone-100: rgba(255, 255, 255, 0.05);
+  --color-stone-200: rgba(255, 255, 255, 0.09);
+  --color-stone-300: rgba(255, 255, 255, 0.16);
+  --color-stone-400: rgba(255, 255, 255, 0.28);
+  --color-paper: #141824;
+  --color-paper-2: #0F1320;
+  background-color: #0C0F1A;
+  color: #FFFFFF;
 }
 
 /* ─── Scroll Reveal ──────────────────────────────── */

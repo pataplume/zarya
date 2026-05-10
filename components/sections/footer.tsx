@@ -2,12 +2,7 @@ import Link from 'next/link'
 
 export function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: 'var(--color-paper-2)',
-        borderTop: '1px solid var(--color-stone-200)',
-      }}
-    >
+    <footer className="dark-section" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
       <div
         className="mx-auto w-full"
         style={{
@@ -81,7 +76,7 @@ export function Footer() {
         {/* Sous-footer */}
         <div
           className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-8"
-          style={{ borderTop: '1px solid var(--color-stone-200)' }}
+          style={{ borderTop: '1px solid rgba(255,255,255,0.09)' }}
         >
           <p className="font-body text-caption text-muted">
             &copy; 2026 Zarya. Tous droits réservés.

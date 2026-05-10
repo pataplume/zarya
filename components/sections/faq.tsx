@@ -16,11 +16,11 @@ const questions = [
   },
   {
     q: "Et si on n'est pas sur Microsoft 365 ?",
-    r: "Pour le moment, Zarya est conçu pour Microsoft 365. Google Workspace est prévu en Phase 2. Si vous êtes sur autre chose, parlons-en — nous traitons certains cas au cas par cas.",
+    r: "Pour le moment, Zarya est conçu pour Microsoft 365. Si vous êtes sur Google Workspace ou autre chose, parlons-en — nous évaluons certains cas au cas par cas.",
   },
   {
     q: "Est-ce que ça marche en allemand ?",
-    r: "Oui. Le français est notre langue source, mais Claude (le modèle utilisé) est nativement multilingue. L'allemand est utilisable dès le pilote, l'italien suit en Phase 2.",
+    r: "Oui. Le français est notre langue source, mais Claude (le modèle utilisé) est nativement multilingue. L'allemand est utilisable dès le pilote.",
   },
   {
     q: "Vous êtes combien dans l'équipe ?",
@@ -41,7 +41,7 @@ export function Faq() {
     <section
       id="faq"
       style={{
-        backgroundColor: 'var(--color-paper-2)',
+        backgroundColor: 'var(--color-paper)',
         paddingTop: 'clamp(5rem, 10vw, 9rem)',
         paddingBottom: 'clamp(5rem, 10vw, 9rem)',
       }}
