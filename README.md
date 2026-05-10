@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zarya — Landing page
 
-## Getting Started
+Site de capture de prospects pour le programme pilote Zarya, SaaS d'IA pour fiduciaires suisses romandes.
 
-First, run the development server:
+**URL cible :** `zarya.condere.ch`
+
+---
+
+## Stack
+
+| Couche | Techno |
+|---|---|
+| Framework | Next.js 16, App Router, TypeScript strict |
+| Styling | Tailwind CSS v4, tokens dans `globals.css` |
+| Fonts | Lexend Giga (titres), Inter (body), JetBrains Mono (chiffres) via `next/font/google` |
+| Forms | react-hook-form + Zod |
+| Soumission | API route → Resend (email) + Supabase (DB) |
+| Hébergement | Vercel |
+
+## Lancer en local
 
 ```bash
+npm install
+cp .env.example .env.local
+# renseigner les variables dans .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Modifier le contenu
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Section | Fichier |
+|---|---|
+| Hero (texte, CTAs) | `components/sections/hero.tsx` |
+| La promesse | `components/sections/promesse.tsx` |
+| Modules (5 cartes) | `components/sections/modules.tsx` |
+| Sécurité | `components/sections/securite.tsx` |
+| Pilote (3 étapes) | `components/sections/pilote.tsx` |
+| FAQ | `components/sections/faq.tsx` |
+| Formulaire | `components/sections/contact.tsx` |
+| Footer | `components/sections/footer.tsx` |
+| Page /merci | `app/merci/page.tsx` |
+| Mentions légales | `app/mentions-legales/page.tsx` |
+| Confidentialité | `app/confidentialite/page.tsx` |
+| Tokens couleur/typo | `app/globals.css` (bloc `@theme`) |
+| Metadata SEO | `app/layout.tsx` |
 
-## Learn More
+## Variables d'environnement
 
-To learn more about Next.js, take a look at the following resources:
+Voir `.env.example`. Les variables Supabase et Resend sont optionnelles : sans elles, les soumissions du formulaire sont loggées en console côté serveur.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Supabase — table requise
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sql
+create table pilot_signups (
+  id uuid default gen_random_uuid() primary key,
+  email text not null,
+  cabinet text not null,
+  collaborateurs text,
+  logiciel text,
+  created_at timestamptz default now()
+);
+```
 
-## Deploy on Vercel
+## Déployer
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Connecter le repo à Vercel
+2. Branche `main` → production `zarya.condere.ch`
+3. Configurer les variables dans Vercel Dashboard (onglet Settings → Environment Variables)
+4. Ajouter un CNAME `zarya` → `cname.vercel-dns.com` chez votre registrar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Architecture des fonts
+
+```
+Lexend Giga  → font-display  → titres (h1, h2, h3, eyebrows)
+Inter        → font-body     → paragraphes, UI, labels
+JetBrains Mono → font-code   → chiffres, statistiques, codes
+```
+
+Toutes déclarées dans `lib/fonts.ts`, injectées comme variables CSS dans `layout.tsx`, mappées dans `globals.css @theme`.
