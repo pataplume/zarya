@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
           Authorization: `Bearer ${resendKey}`,
         },
         body: JSON.stringify({
-          from: 'Zarya <noreply@condere.ch>',
+          from: 'Zarya <noreply@zarya.condere.ch>',
           to: [notifyEmail],
           subject: `Nouvelle demande pilote — ${data.cabinet}`,
           html: `
