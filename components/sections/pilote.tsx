@@ -18,7 +18,7 @@ const etapes = [
     num: '03.',
     titre: 'Six mois en conditions réelles',
     texte:
-      'Vous utilisez Zarya gratuitement pendant six mois. En échange, vous nous donnez votre feedback toutes les semaines. Au terme, vous décidez : continuer avec l'un de nos abonnements dès CHF 199/mois, ou nous quitter sans frais.',
+      "Vous utilisez Zarya gratuitement pendant six mois. En échange, vous nous donnez votre feedback toutes les semaines. Au terme, vous décidez : continuer avec l'un de nos abonnements dès CHF 199/mois, ou nous quitter sans frais.",
   },
 ]
 
