@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 }
 
 const sousTraitants = [
-  { nom: 'Anthropic via AWS Bedrock', fonction: 'Inférence LLM', localisation: 'Frankfurt DE' },
-  { nom: 'AWS', fonction: 'Hébergement + backups', localisation: 'Frankfurt DE' },
-  { nom: 'Vercel', fonction: 'Hébergement frontend', localisation: 'Edge global, primaire EU' },
-  { nom: 'Resend', fonction: 'Emails transactionnels', localisation: 'EU' },
+  { nom: 'Anthropic via AWS Bedrock', fonction: 'Inférence IA', localisation: 'Frankfurt DE' },
+  { nom: 'Supabase', fonction: 'Backend & base de données', localisation: 'Zurich CH' },
+  { nom: 'Vercel', fonction: 'Hébergement frontend', localisation: 'Frankfurt DE' },
+  { nom: 'Resend', fonction: 'Emails transactionnels', localisation: 'Ireland EU' },
 ]
 
 export default function ConfidentialitePage() {

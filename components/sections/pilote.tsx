@@ -18,7 +18,7 @@ const etapes = [
     num: '03.',
     titre: 'Six mois en conditions réelles',
     texte:
-      'Vous utilisez Zarya gratuitement pendant six mois. En échange, vous nous donnez votre feedback toutes les semaines. Au terme, vous décidez : continuer (à 199 ou 399 CHF/mois), ou nous quitter sans frais.',
+      'Vous utilisez Zarya gratuitement pendant six mois. En échange, vous nous donnez votre feedback toutes les semaines. Au terme, vous décidez : continuer avec l'un de nos abonnements dès CHF 199/mois, ou nous quitter sans frais.',
   },
 ]
 
@@ -81,7 +81,7 @@ export function Pilote() {
           <div className="mt-12 pt-8 border-t border-stone-200 max-w-[62ch]">
             <p className="font-body text-body text-ink-2 leading-[1.6]">
               Nous cherchons trois fiduciaires entre 5 et 30 collaborateurs, déjà équipées
-              Microsoft 365 et Bexio, Topal ou Crésus. Une au minimum bilingue français-allemand.
+              Microsoft 365 et Bexio, Winbiz ou Crésus. Une au minimum bilingue français-allemand.
             </p>
           </div>
         </RevealSection>

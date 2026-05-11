@@ -51,9 +51,7 @@ export default function MentionsLegalesPage() {
               Éditeur du site
             </h2>
             <p>Ce site est édité par Condere.</p>
-            <p className="mt-2 text-muted text-caption">
-              Raison sociale, adresse et numéro d&apos;identification à compléter.
-            </p>
+            <p className="mt-2">1207 Genève, Suisse</p>
             <p className="mt-2">
               Contact :{' '}
               <a href="mailto:contact@condere.ch" className="border-b border-stone-300 pb-px hover:border-ink hover:text-ink transition-colors duration-150">
@@ -70,9 +68,8 @@ export default function MentionsLegalesPage() {
               Hébergeur
             </h2>
             <p>
-              Ce site est hébergé par Vercel Inc., 340 Pine Street, Suite 701, San Francisco, CA
-              94104, États-Unis. Le déploiement utilise des infrastructures avec points de présence
-              en Europe (primaire UE).
+              Les infrastructures applicatives sont hébergées sur des serveurs situés à Frankfurt,
+              Allemagne (Union Européenne).
             </p>
           </section>
 

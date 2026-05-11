@@ -12,7 +12,7 @@ const questions = [
   },
   {
     q: "Qui voit nos données ?",
-    r: "Vous, vos collaborateurs, et personne d'autre. Pas Anthropic (accord Zero Data Retention signé), pas nous au-delà de l'opérationnel strict, pas d'éditeur tiers. Liste complète des sous-traitants publiée dans nos mentions légales.",
+    r: "Vous et vos collaborateurs uniquement. Ni Condere ni les sociétés tierces (traitement IA, hébergement) n'ont accès à vos données. Liste complète des sous-traitants publiée dans nos mentions légales.",
   },
   {
     q: "Et si on n'est pas sur Microsoft 365 ?",
@@ -20,19 +20,19 @@ const questions = [
   },
   {
     q: "Est-ce que ça marche en allemand ?",
-    r: "Oui. Le français est notre langue source, mais Claude (le modèle utilisé) est nativement multilingue. L'allemand est utilisable dès le pilote.",
+    r: "Oui. Le français est notre langue source, mais les IA sont nativement multilingues et s'adapteront à la langue de l'utilisateur·rice. L'allemand est utilisable dès le pilote.",
   },
   {
     q: "Vous êtes combien dans l'équipe ?",
-    r: "Deux fondateurs, basés en Suisse romande, accompagnés d'un advisor expert-comptable. Nous travaillons à temps plein sur Zarya. C'est délibérément petit : nous voulons rester proches de chaque pilote.",
+    r: "Nous sommes deux, basés à Genève, avec une approche IA Native, le standard du futur pour toute entreprise en croissance.",
   },
   {
     q: "Quel est le prix après le pilote ?",
-    r: "Entre 199 et 399 CHF par mois selon les modules activés et la taille du cabinet. Au-delà des quotas inclus, 0,10 CHF par document supplémentaire. Pas de frais d'installation, pas d'engagement annuel, résiliation au mois.",
+    r: "Dès CHF 199/mois pour un module et des prix dégressifs à chaque module supplémentaire.",
   },
   {
-    q: "Que veut dire « Zarya » ?",
-    r: "« Aurore » en racine slave. Le moment où la nuit cède sans que la lumière s'impose.",
+    q: "Que veut dire « Zarya » ?",
+    r: "\"Aurore\" — et c'est aussi le nom du premier module de la Station spatiale internationale, symbole de la réussite d'un défi à la frontière de l'univers et de collaboration entre les peuples.",
   },
 ]
 

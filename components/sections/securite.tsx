@@ -12,7 +12,7 @@ const guarantees = [
   {
     label: 'INFÉRENCE IA',
     items: [
-      'Modèles Claude (Anthropic) exécutés sur AWS Bedrock Frankfurt.',
+      'Modèles IA exécutés sur serveurs sécurisés en Allemagne.',
       'Aucun stockage post-traitement (Zero Data Retention).',
     ],
   },

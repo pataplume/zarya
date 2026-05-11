@@ -67,12 +67,6 @@ export function Promesse() {
                 <p className="font-body text-body text-ink-2 mt-3">/ semaine</p>
                 <p className="font-body text-body text-ink-2">gagnées par collaborateur</p>
                 <p className="font-body text-body text-ink-2">sur les tâches documentaires</p>
-                <p
-                  className="font-body text-caption text-muted mt-4"
-                  style={{ fontStyle: 'italic' }}
-                >
-                  estimation, à valider en pilote
-                </p>
               </div>
             </div>
           </div>

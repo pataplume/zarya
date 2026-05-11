@@ -45,7 +45,7 @@ export function Hero() {
               marginBottom: '1.5rem',
             }}
           >
-            ZARYA — POUR LES FIDUCIAIRES SUISSES
+            ZARYA
           </p>
 
           <h1
@@ -59,8 +59,7 @@ export function Hero() {
               marginBottom: '1.5rem',
             }}
           >
-            L&apos;intelligence artificielle pour les fiduciaires qui prennent leur métier au
-            sérieux.
+            L&apos;IA pour fiduciaires Suisses
           </h1>
 
           <p
@@ -73,8 +72,7 @@ export function Hero() {
               marginBottom: '2.5rem',
             }}
           >
-            Tri des emails, classement des documents, pré-saisie comptable. Sans changer Bexio,
-            Topal ou Crésus. Sans envoyer vos données hors de Suisse.
+            Communique avec Bexio, Crésus, Winbiz, Abacus, Odoo.
           </p>
 
           <div className="flex items-center gap-6 flex-wrap">
@@ -108,20 +106,23 @@ export function Hero() {
 
           {/* Trust bar */}
           <div
-            className="mt-12 pt-8 flex items-center gap-4 flex-wrap"
+            className="mt-12 pt-8 flex items-center gap-3 flex-wrap"
             style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}
           >
-            <span className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.45)' }}>
-              Hébergement Frankfurt
-            </span>
-            <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.875rem' }} aria-hidden="true">·</span>
-            <span className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.45)' }}>
-              Conforme nLPD
-            </span>
-            <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: '0.875rem' }} aria-hidden="true">·</span>
-            <span className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.45)' }}>
-              Indépendant des éditeurs ERP
-            </span>
+            {[
+              'Hébergé en Suisse et EU',
+              'Conforme nLPD & RGPD',
+              'IA Native',
+            ].map((item, i, arr) => (
+              <span key={item} className="flex items-center gap-3">
+                <span className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.45)' }}>
+                  {item}
+                </span>
+                {i < arr.length - 1 && (
+                  <span style={{ color: 'rgba(255,255,255,0.2)' }} aria-hidden="true">—</span>
+                )}
+              </span>
+            ))}
           </div>
         </div>
       </div>

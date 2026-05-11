@@ -22,8 +22,11 @@ export function Footer() {
             >
               Zarya
             </p>
-            <p className="font-body text-body text-ink-2 mt-3 mb-2">
-              Construit en Suisse romande.
+            <p className="font-body text-body text-ink-2 mt-3 mb-1">
+              Made with love and robots in Geneva
+            </p>
+            <p className="font-body text-caption text-muted mb-2">
+              Zarya est un module de Condere — Swiss based &amp; Swiss made
             </p>
             <p className="font-code text-caption text-muted" style={{ fontFeatureSettings: '"tnum"' }}>
               v0.1 — pilote
