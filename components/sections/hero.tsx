@@ -1,130 +1,155 @@
-import Image from 'next/image'
-
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-end"
-      style={{ minHeight: '100svh' }}
+      style={{
+        backgroundColor: '#F4F6FC',
+        minHeight: '100svh',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        overflow: 'hidden',
+      }}
     >
-      {/* Image plein écran */}
-      <Image
-        src="/zarya_header.png"
-        alt="Interface Zarya montrant la classification automatique de documents dans un cabinet fiduciaire suisse"
-        fill
-        className="object-cover object-top"
-        priority
-        quality={90}
-      />
-
-      {/* Overlay gradient du bas */}
+      {/* ─── Top corners ─── */}
       <div
-        className="absolute inset-0"
         style={{
-          background:
-            'linear-gradient(to bottom, rgba(12,15,26,0.15) 0%, rgba(12,15,26,0.55) 50%, rgba(12,15,26,0.88) 100%)',
-        }}
-      />
-
-      {/* Contenu en bas */}
-      <div
-        className="relative z-10"
-        style={{
-          paddingLeft: 'clamp(1.5rem, 5vw, 4rem)',
-          paddingRight: 'clamp(1.5rem, 5vw, 4rem)',
-          paddingBottom: 'clamp(3rem, 7vw, 5rem)',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          padding: 'clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 5vw, 4rem)',
+          pointerEvents: 'none',
         }}
       >
-        <div className="mx-auto w-full" style={{ maxWidth: '1240px' }}>
-          <p
-            className="font-display font-medium uppercase"
-            style={{
-              fontSize: '0.75rem',
-              letterSpacing: '0.14em',
-              color: 'rgba(255,255,255,0.55)',
-              marginBottom: '1.5rem',
-            }}
-          >
-            ZARYA
-          </p>
+        <span
+          style={{
+            fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
+            fontWeight: 700,
+            fontSize: '0.6rem',
+            letterSpacing: '0.16em',
+            color: '#050A30',
+            opacity: 0.4,
+          }}
+        >
+          ZARYA · CONDERE
+        </span>
+        <span
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+            fontSize: '0.6rem',
+            letterSpacing: '0.08em',
+            color: '#050A30',
+            opacity: 0.35,
+          }}
+        >
+          STATUT · PILOTE OUVERT
+        </span>
+      </div>
 
-          <h1
-            className="font-display font-[400]"
-            style={{
-              fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-              lineHeight: 1.05,
-              letterSpacing: '-0.02em',
-              color: '#FFFFFF',
-              maxWidth: '20ch',
-              marginBottom: '1.5rem',
-            }}
-          >
-            L&apos;IA pour fiduciaires Suisses
-          </h1>
+      {/* ─── Main content ─── */}
+      <div
+        style={{
+          width: '100%',
+          maxWidth: '1240px',
+          margin: '0 auto',
+          paddingLeft: 'clamp(1.5rem, 5vw, 4rem)',
+          paddingRight: 'clamp(1.5rem, 5vw, 4rem)',
+          paddingTop: 'clamp(7rem, 14vw, 10rem)',
+          paddingBottom: 'clamp(6rem, 12vw, 9rem)',
+        }}
+      >
+        <h1
+          style={{
+            fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
+            fontWeight: 700,
+            fontSize: 'clamp(4.5rem, 14vw, 13rem)',
+            lineHeight: 0.9,
+            letterSpacing: '-0.02em',
+            color: '#050A30',
+            marginBottom: 'clamp(2rem, 4vw, 3.5rem)',
+          }}
+        >
+          ZARYA<span style={{ color: '#FF5B00' }}>.</span>
+        </h1>
 
-          <p
-            className="font-body"
-            style={{
-              fontSize: '1.25rem',
-              lineHeight: 1.5,
-              color: 'rgba(255,255,255,0.72)',
-              maxWidth: '52ch',
-              marginBottom: '2.5rem',
-            }}
-          >
-            Communique avec Bexio, Crésus, Winbiz, Abacus, Odoo.
-          </p>
+        <p
+          style={{
+            fontFamily: 'var(--font-inter), system-ui, sans-serif',
+            fontSize: 'clamp(1rem, 1.75vw, 1.375rem)',
+            lineHeight: 1.5,
+            color: '#050A30',
+            opacity: 0.65,
+            maxWidth: '44ch',
+            marginBottom: 'clamp(2.5rem, 5vw, 3.5rem)',
+          }}
+        >
+          L&apos;intelligence artificielle pour les fiduciaires suisses.
+          <br />
+          Compatible Bexio, Crésus, Winbiz, Abacus, Odoo.
+        </p>
 
-          <div className="flex items-center gap-6 flex-wrap">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center border px-7 font-display font-[500] uppercase rounded-[4px] transition-colors duration-150"
-              style={{
-                backgroundColor: '#FFFFFF',
-                color: '#0C0F1A',
-                borderColor: '#FFFFFF',
-                paddingTop: '0.875rem',
-                paddingBottom: '0.875rem',
-                fontSize: '0.75rem',
-                letterSpacing: '0.08em',
-              }}
-            >
-              Demander un accès pilote
-            </a>
-            <a
-              href="#modules"
-              className="font-body transition-colors duration-150"
-              style={{
-                color: 'rgba(255,255,255,0.72)',
-                borderBottom: '1px solid rgba(255,255,255,0.3)',
-                paddingBottom: '1px',
-              }}
-            >
-              Voir comment ça fonctionne
-            </a>
-          </div>
+        <a
+          href="#contact"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
+            fontWeight: 700,
+            fontSize: '0.6rem',
+            letterSpacing: '0.16em',
+            textTransform: 'uppercase',
+            color: '#FFFFFF',
+            backgroundColor: '#FF5B00',
+            padding: '0.875rem 1.75rem',
+            borderRadius: '4px',
+            textDecoration: 'none',
+          }}
+        >
+          Demander un accès
+        </a>
+      </div>
 
-          {/* Trust bar */}
-          <div
-            className="mt-12 pt-8 flex items-center gap-3 flex-wrap"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}
-          >
-            {[
-              'Hébergé en Suisse et EU',
-              'Conforme nLPD & RGPD',
-              'IA Native',
-            ].map((item, i, arr) => (
-              <span key={item} className="flex items-center gap-3">
-                <span className="font-body" style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.45)' }}>
-                  {item}
-                </span>
-                {i < arr.length - 1 && (
-                  <span style={{ color: 'rgba(255,255,255,0.2)' }} aria-hidden="true">—</span>
-                )}
-              </span>
-            ))}
-          </div>
-        </div>
+      {/* ─── Bottom corners ─── */}
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          right: 0,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-end',
+          padding: 'clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 5vw, 4rem)',
+          pointerEvents: 'none',
+        }}
+      >
+        <span
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+            fontSize: '0.6rem',
+            letterSpacing: '0.08em',
+            color: '#050A30',
+            opacity: 0.35,
+          }}
+        >
+          46°12′N · 6°09′E · GENÈVE
+        </span>
+        <span
+          style={{
+            fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+            fontSize: '0.6rem',
+            letterSpacing: '0.08em',
+            color: '#050A30',
+            opacity: 0.35,
+            textAlign: 'right',
+          }}
+        >
+          nLPD · RGPD · SUISSE &amp; EU
+        </span>
       </div>
     </section>
   )

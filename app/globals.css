@@ -21,8 +21,13 @@
   --color-stone-400: #A8A498;
 
   /* Accent unique */
-  --color-accent: #1A4D8C;
-  --color-accent-soft: #2E5FA0;
+  --color-accent: #FF5B00;
+  --color-accent-soft: #FF7A2A;
+
+  /* Brand palette */
+  --color-ice: #F4F6FC;
+  --color-void: #050A30;
+  --color-orange: #FF5B00;
 
   /* Status */
   --color-success: #15803D;

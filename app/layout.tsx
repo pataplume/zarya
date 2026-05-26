@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { lexendGiga, inter, jetbrainsMono } from '@/lib/fonts'
+import { syncopate, lexendGiga, inter, jetbrainsMono } from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${lexendGiga.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${syncopate.variable} ${lexendGiga.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <script

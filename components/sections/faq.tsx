@@ -55,7 +55,7 @@ export function Faq() {
         }}
       >
         <RevealSection>
-          <Eyebrow className="mb-8">─── 05 / QUESTIONS</Eyebrow>
+          <Eyebrow className="mb-8">─── 04 / QUESTIONS</Eyebrow>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-4">

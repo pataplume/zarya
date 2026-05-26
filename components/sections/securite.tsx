@@ -5,30 +5,30 @@ const guarantees = [
   {
     label: 'HÉBERGEMENT',
     items: [
-      'Données stockées à Frankfurt (UE).',
-      'Sauvegardes chiffrées, région séparée.',
+      "Infrastructure localisée en Europe : IA et frontend hébergés à Frankfurt et Paris, backend en Suisse (Zurich).",
+      'Sauvegardes chiffrées, stockées dans une région distincte pour une résilience maximale.',
     ],
   },
   {
     label: 'INFÉRENCE IA',
     items: [
-      'Modèles IA exécutés sur serveurs sécurisés en Allemagne.',
-      'Aucun stockage post-traitement (Zero Data Retention).',
+      'Modèles exécutés sur des serveurs sécurisés en Allemagne.',
+      "Aucune donnée n'est conservée après traitement (Zero Data Retention).",
     ],
   },
   {
     label: 'CONFORMITÉ',
     items: [
-      'Conforme nLPD suisse et RGPD européen.',
-      'Registre des sous-traitants public, DPA disponible.',
+      'Conforme à la nLPD suisse et au RGPD européen.',
+      'Registre des sous-traitants accessible publiquement et DPA disponible sur demande.',
     ],
   },
   {
-    label: 'ACCÈS',
+    label: 'ACCÈS & CONTRÔLE',
     items: [
-      'Authentification multi-facteurs.',
-      'Audit complet de chaque action.',
-      'Suppression intégrale à la résiliation.',
+      'Authentification multi-facteurs (MFA).',
+      'Journalisation complète de chaque action pour une traçabilité totale.',
+      'Suppression intégrale des données à la résiliation.',
     ],
   },
 ]
@@ -68,9 +68,9 @@ export function Securite() {
                 Vos données restent en Europe.
               </h2>
               <p className="font-body text-ink-2 text-body leading-[1.6] max-w-[52ch]">
-                Nous traitons des données fiduciaires. C&apos;est-à-dire : des données financières,
-                juridiques, parfois sensibles, presque toujours confidentielles. Nous prenons cela
-                au sérieux.
+                Nous traitons des données fiduciaires — financières, juridiques, souvent sensibles
+                et toujours confidentielles. Leur sécurité n&apos;est pas une option : c&apos;est
+                une priorité absolue.
               </p>
             </div>
 
@@ -82,7 +82,7 @@ export function Securite() {
                     key={g.label}
                     className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-2 sm:gap-8 pt-6 border-t border-stone-200 first:border-t-0 first:pt-0"
                   >
-                    <dt className="font-display font-[500] text-muted text-[0.7rem] uppercase tracking-[0.14em] pt-px min-w-[9rem]">
+                    <dt className="font-display font-[500] text-muted text-[0.7rem] uppercase tracking-[0.14em] pt-px min-w-[10rem]">
                       {g.label}
                     </dt>
                     <dd>

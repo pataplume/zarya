@@ -85,7 +85,7 @@ export function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* ─── Intro ─── */}
             <div className="lg:col-span-5">
-              <Eyebrow className="mb-8">─── 06 / DEMANDER UN ACCÈS</Eyebrow>
+              <Eyebrow className="mb-8">─── 05 / DEMANDER UN ACCÈS</Eyebrow>
               <h2
                 className="font-display font-[400] text-ink mb-6"
                 style={{
@@ -202,7 +202,7 @@ export function Contact() {
                     >
                       <option value="">—</option>
                       <option value="bexio">Bexio</option>
-                      <option value="topal">Topal</option>
+                      <option value="winbiz">Winbiz</option>
                       <option value="cresus">Crésus</option>
                       <option value="abacus">Abacus</option>
                       <option value="autre">Autre</option>

@@ -1,4 +1,12 @@
-import { Lexend_Giga, Inter, JetBrains_Mono } from 'next/font/google'
+import { Lexend_Giga, Inter, JetBrains_Mono, Syncopate } from 'next/font/google'
+
+export const syncopate = Syncopate({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-syncopate',
+  display: 'swap',
+  fallback: ['system-ui', 'sans-serif'],
+})
 
 export const lexendGiga = Lexend_Giga({
   subsets: ['latin'],
