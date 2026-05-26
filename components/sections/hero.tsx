@@ -3,7 +3,7 @@ export function Hero() {
     <section
       id="hero"
       style={{
-        backgroundColor: '#F4F6FC',
+        backgroundColor: '#F2EFE9',
         minHeight: '100svh',
         position: 'relative',
         display: 'flex',
@@ -31,7 +31,7 @@ export function Hero() {
             fontWeight: 700,
             fontSize: '0.6rem',
             letterSpacing: '0.16em',
-            color: '#050A30',
+            color: '#0D2C22',
             opacity: 0.4,
           }}
         >
@@ -42,7 +42,7 @@ export function Hero() {
             fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
             fontSize: '0.6rem',
             letterSpacing: '0.08em',
-            color: '#050A30',
+            color: '#0D2C22',
             opacity: 0.35,
           }}
         >
@@ -62,6 +62,7 @@ export function Hero() {
           paddingBottom: 'clamp(6rem, 12vw, 9rem)',
         }}
       >
+        {/* ZARYA. en Syncopate, entièrement orange comme le logo */}
         <h1
           style={{
             fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
@@ -69,20 +70,21 @@ export function Hero() {
             fontSize: 'clamp(4.5rem, 14vw, 13rem)',
             lineHeight: 0.9,
             letterSpacing: '-0.02em',
-            color: '#050A30',
+            color: '#FF5B00',
             marginBottom: 'clamp(2rem, 4vw, 3.5rem)',
+            textTransform: 'uppercase',
           }}
         >
-          ZARYA<span style={{ color: '#FF5B00' }}>.</span>
+          ZARYA.
         </h1>
 
         <p
           style={{
-            fontFamily: 'var(--font-inter), system-ui, sans-serif',
+            fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
             fontSize: 'clamp(1rem, 1.75vw, 1.375rem)',
             lineHeight: 1.5,
-            color: '#050A30',
-            opacity: 0.65,
+            color: '#0D2C22',
+            opacity: 0.68,
             maxWidth: '44ch',
             marginBottom: 'clamp(2.5rem, 5vw, 3.5rem)',
           }}
@@ -97,12 +99,12 @@ export function Hero() {
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
+            fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
             fontWeight: 700,
-            fontSize: '0.6rem',
-            letterSpacing: '0.16em',
+            fontSize: '0.75rem',
+            letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            color: '#FFFFFF',
+            color: '#F2EFE9',
             backgroundColor: '#FF5B00',
             padding: '0.875rem 1.75rem',
             borderRadius: '4px',
@@ -132,7 +134,7 @@ export function Hero() {
             fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
             fontSize: '0.6rem',
             letterSpacing: '0.08em',
-            color: '#050A30',
+            color: '#0D2C22',
             opacity: 0.35,
           }}
         >
@@ -143,7 +145,7 @@ export function Hero() {
             fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
             fontSize: '0.6rem',
             letterSpacing: '0.08em',
-            color: '#050A30',
+            color: '#0D2C22',
             opacity: 0.35,
             textAlign: 'right',
           }}

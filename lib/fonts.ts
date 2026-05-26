@@ -1,4 +1,4 @@
-import { Lexend_Giga, Inter, JetBrains_Mono, Syncopate } from 'next/font/google'
+import { Plus_Jakarta_Sans, JetBrains_Mono, Syncopate } from 'next/font/google'
 
 export const syncopate = Syncopate({
   subsets: ['latin'],
@@ -8,18 +8,10 @@ export const syncopate = Syncopate({
   fallback: ['system-ui', 'sans-serif'],
 })
 
-export const lexendGiga = Lexend_Giga({
+export const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-lexend-giga',
-  display: 'swap',
-  fallback: ['system-ui', 'sans-serif'],
-})
-
-export const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-plus-jakarta',
   display: 'swap',
   fallback: ['system-ui', 'sans-serif'],
 })
