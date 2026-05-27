@@ -117,7 +117,7 @@ export function Modules() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-12">
             <h2
-              className="font-display font-[400] text-ink"
+              className="font-display font-bold text-ink"
               style={{
                 fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                 lineHeight: 1.15,
@@ -143,7 +143,7 @@ export function Modules() {
                   MODULE {mod.num}
                 </p>
                 <h3
-                  className="font-display font-[400] text-ink mb-3"
+                  className="font-display font-bold text-ink mb-3"
                   style={{ fontSize: '1.125rem', lineHeight: 1.3 }}
                 >
                   {mod.name}
@@ -164,7 +164,7 @@ export function Modules() {
                   MODULE {mod.num}
                 </p>
                 <h3
-                  className="font-display font-[400] text-ink mb-3"
+                  className="font-display font-bold text-ink mb-3"
                   style={{ fontSize: '1.125rem', lineHeight: 1.3 }}
                 >
                   {mod.name}

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { syncopate, plusJakartaSans, jetbrainsMono } from '@/lib/fonts'
+import { Navbar } from '@/components/layout/navbar'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -64,6 +65,7 @@ export default function RootLayout({
         >
           Aller au contenu principal
         </a>
+        <Navbar />
         <main id="contenu-principal" className="flex-1">
           {children}
         </main>

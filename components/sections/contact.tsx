@@ -87,7 +87,7 @@ export function Contact() {
             <div className="lg:col-span-5">
               <Eyebrow className="mb-8">─── 05 / DEMANDER UN ACCÈS</Eyebrow>
               <h2
-                className="font-display font-[400] text-ink mb-6"
+                className="font-display font-bold text-ink mb-6"
                 style={{
                   fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                   lineHeight: 1.15,

@@ -25,7 +25,7 @@ export function Explicatif() {
           {/* Title row */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-12">
             <h2
-              className="lg:col-span-7 font-display font-[400] text-ink"
+              className="lg:col-span-7 font-display font-bold text-ink"
               style={{
                 fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                 lineHeight: 1.15,
@@ -35,7 +35,7 @@ export function Explicatif() {
               Le logiciel pour les fiduciaires suisses.
             </h2>
             <p
-              className="lg:col-span-5 font-body text-ink-2 leading-[1.6] lg:pt-2"
+              className="lg:col-span-5 font-body font-bold text-ink-2 leading-[1.6] lg:pt-2"
               style={{ fontSize: '1.125rem' }}
             >
               Automatisez votre fiduciaire et concentrez-vous enfin sur ce qui compte vraiment.

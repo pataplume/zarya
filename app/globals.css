@@ -149,6 +149,20 @@ body {
   animation: hero-reveal-lr 1.2s ease-out 0.15s forwards;
 }
 
+/* ─── Navbar ────────────────────────────────────── */
+.nav-link {
+  color: rgba(13, 44, 34, 0.55);
+  transition: color 150ms ease;
+}
+.nav-link:hover {
+  color: #0D2C22;
+}
+
+.nav-cta:hover {
+  background-color: #0D2C22;
+  color: #F2EFE9;
+}
+
 /* ─── Footer links ──────────────────────────────── */
 .footer-link {
   color: rgba(255, 255, 255, 0.72);

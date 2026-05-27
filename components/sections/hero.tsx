@@ -4,7 +4,7 @@ export function Hero() {
       id="hero"
       style={{
         backgroundColor: '#F2EFE9',
-        minHeight: '100svh',
+        minHeight: 'calc(100svh - 60px)',
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',

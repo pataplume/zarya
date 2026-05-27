@@ -60,7 +60,7 @@ export function Faq() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-4">
               <h2
-                className="font-display font-[400] text-ink"
+                className="font-display font-bold text-ink"
                 style={{
                   fontSize: 'clamp(2rem, 3.5vw, 3rem)',
                   lineHeight: 1.15,
@@ -79,7 +79,7 @@ export function Faq() {
                     className="pt-6 pb-6 border-b border-stone-200 first:border-t first:border-stone-200"
                   >
                     <dt
-                      className="font-display font-[400] text-ink mb-3"
+                      className="font-display font-bold text-ink mb-3"
                       style={{ fontSize: '1.125rem', lineHeight: 1.3 }}
                     >
                       {item.q}
