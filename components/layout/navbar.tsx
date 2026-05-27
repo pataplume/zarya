@@ -13,29 +13,30 @@ export function Navbar() {
         style={{
           maxWidth: '1240px',
           margin: '0 auto',
-          paddingLeft: 'clamp(1.5rem, 5vw, 4rem)',
-          paddingRight: 'clamp(1.5rem, 5vw, 4rem)',
-          height: '60px',
-          display: 'grid',
-          gridTemplateColumns: '1fr auto 1fr',
+          paddingLeft: 'clamp(1.25rem, 5vw, 4rem)',
+          paddingRight: 'clamp(1.25rem, 5vw, 4rem)',
+          height: '56px',
+          display: 'flex',
           alignItems: 'center',
-          gap: '1.5rem',
+          justifyContent: 'space-between',
+          gap: '1rem',
         }}
       >
-        {/* ─── Logo gauche ─── */}
+        {/* ─── Logo ─── */}
         <a
           href="/"
           aria-label="Zarya — accueil"
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '0.625rem',
+            gap: '0.5rem',
             textDecoration: 'none',
+            flexShrink: 0,
           }}
         >
           <svg
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 417 417"
             fill="#FF5B00"
             aria-hidden="true"
@@ -66,13 +67,13 @@ export function Navbar() {
           </span>
         </a>
 
-        {/* ─── Nav liens centre ─── */}
-        <nav aria-label="Navigation principale">
+        {/* ─── Nav liens — cachés sur mobile ─── */}
+        <nav aria-label="Navigation principale" className="hidden md:block">
           <ul
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: 'clamp(1.5rem, 3vw, 2.5rem)',
+              gap: 'clamp(1.25rem, 2.5vw, 2.25rem)',
               listStyle: 'none',
               margin: 0,
               padding: 0,
@@ -103,32 +104,32 @@ export function Navbar() {
           </ul>
         </nav>
 
-        {/* ─── CTA droite ─── */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <a
-            href="#contact"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.375rem',
-              fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
-              fontWeight: 700,
-              fontSize: '0.6875rem',
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              color: '#FFFFFF',
-              backgroundColor: '#1A2BD4',
-              border: '1px solid #1A2BD4',
-              padding: '0.5rem 1rem',
-              textDecoration: 'none',
-              borderRadius: '2px',
-              whiteSpace: 'nowrap',
-            }}
-            className="nav-cta"
-          >
-            DEMANDER UN ACCÈS →
-          </a>
-        </div>
+        {/* ─── CTA ─── */}
+        <a
+          href="#contact"
+          className="nav-cta"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+            fontWeight: 700,
+            fontSize: '0.6875rem',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: '#FFFFFF',
+            backgroundColor: '#1A2BD4',
+            border: '1px solid #1A2BD4',
+            padding: '0.5rem 1rem',
+            textDecoration: 'none',
+            borderRadius: '2px',
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
+          }}
+        >
+          {/* Texte court sur mobile, long sur desktop */}
+          <span className="md:hidden">Accès pilote →</span>
+          <span className="hidden md:inline">DEMANDER UN ACCÈS →</span>
+        </a>
       </div>
     </header>
   )
