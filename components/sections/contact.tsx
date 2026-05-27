@@ -222,7 +222,8 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center justify-center bg-ink text-paper border border-ink px-7 py-[0.875rem] font-display font-[500] text-[0.75rem] uppercase tracking-[0.08em] rounded-[4px] transition-colors duration-150 hover:bg-paper hover:text-ink focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="inline-flex items-center justify-center text-white border border-[#1A2BD4] px-7 py-[0.875rem] font-display font-[700] text-[0.75rem] uppercase tracking-[0.08em] rounded-[4px] transition-colors duration-150 hover:bg-[#0D2C22] hover:border-[#0D2C22] focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{ backgroundColor: '#1A2BD4' }}
                   >
                     {isSubmitting ? 'Envoi en cours…' : 'Envoyer ma demande'}
                   </button>

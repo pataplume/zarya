@@ -116,13 +116,13 @@ export function Navbar() {
               fontSize: '0.6875rem',
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
-              color: '#0D2C22',
-              border: '1px solid #0D2C22',
+              color: '#FFFFFF',
+              backgroundColor: '#1A2BD4',
+              border: '1px solid #1A2BD4',
               padding: '0.5rem 1rem',
               textDecoration: 'none',
               borderRadius: '2px',
               whiteSpace: 'nowrap',
-              transition: 'background-color 150ms ease, color 150ms ease',
             }}
             className="nav-cta"
           >

@@ -102,16 +102,21 @@ body {
 /* ─── Card hover ─────────────────────────────────── */
 .module-card {
   transition:
-    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 220ms ease;
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 260ms ease;
 }
 
+/* Hover : remplissage bleu condere + texte blanc via surcharge des variables */
 .module-card:hover {
-  transform: translateY(-3px);
-  /* Orange left-border accent without shifting layout */
-  box-shadow: inset 3px 0 0 var(--color-accent);
-  background-color: var(--color-paper-2);
+  background-color: #1A2BD4;
+  border-color: #1A2BD4;
+  transform: translateY(-4px);
+  /* Surcharge des tokens — cascade vers tous les enfants */
+  --color-ink:   #FFFFFF;
+  --color-ink-2: rgba(255, 255, 255, 0.82);
+  --color-muted: rgba(255, 255, 255, 0.55);
+  --color-accent: #FFFFFF;   /* numeral romain orange → blanc sur fond bleu */
 }
 
 /* ─── Hero animations ───────────────────────────── */
@@ -160,6 +165,7 @@ body {
 
 .nav-cta:hover {
   background-color: #0D2C22;
+  border-color: #0D2C22;
   color: #F2EFE9;
 }
 

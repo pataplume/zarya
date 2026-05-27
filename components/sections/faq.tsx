@@ -26,14 +26,6 @@ const questions = [
     q: "Vous êtes combien dans l'équipe ?",
     r: "Nous sommes deux, basés à Genève, avec une approche IA Native, le standard du futur pour toute entreprise en croissance.",
   },
-  {
-    q: "Quel est le prix après le pilote ?",
-    r: "Dès CHF 199/mois pour un module et des prix dégressifs à chaque module supplémentaire.",
-  },
-  {
-    q: "Que veut dire « Zarya » ?",
-    r: "\"Aurore\" — et c'est aussi le nom du premier module de la Station spatiale internationale, symbole de la réussite d'un défi à la frontière de l'univers et de collaboration entre les peuples.",
-  },
 ]
 
 export function Faq() {
