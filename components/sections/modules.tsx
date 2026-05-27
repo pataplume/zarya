@@ -60,6 +60,118 @@ const modules = [
   },
 ]
 
+function ModuleCard({ mod }: { mod: typeof modules[number] }) {
+  return (
+    <article
+      className="module-card h-full"
+      style={{
+        padding: 'clamp(1.5rem, 3vw, 2rem)',
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '320px',
+      }}
+    >
+      {/* Numéro romain + badge statut */}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          marginBottom: '1.125rem',
+        }}
+      >
+        <span
+          className="module-numeral"
+          style={{
+            fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
+            fontWeight: 700,
+            fontSize: 'clamp(2rem, 4vw, 3rem)',
+            lineHeight: 1,
+            letterSpacing: '-0.02em',
+          }}
+        >
+          {mod.roman}
+        </span>
+
+        <span
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '0.35rem',
+            paddingTop: '0.3rem',
+          }}
+        >
+          <span
+            className="module-status-dot"
+            style={{
+              width: '5px',
+              height: '5px',
+              borderRadius: '50%',
+              flexShrink: 0,
+              display: 'inline-block',
+            }}
+          />
+          <span
+            className="module-status-text"
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+              fontSize: '0.5625rem',
+              letterSpacing: '0.12em',
+            }}
+          >
+            PILOTE
+          </span>
+        </span>
+      </div>
+
+      {/* Nom du module */}
+      <h3
+        className="module-title"
+        style={{
+          fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+          fontWeight: 700,
+          fontSize: '1.125rem',
+          lineHeight: 1.25,
+          marginBottom: '0.375rem',
+        }}
+      >
+        {mod.name}
+      </h3>
+
+      {/* Tagline */}
+      <p
+        className="module-tagline"
+        style={{
+          fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+          fontSize: '0.8125rem',
+          fontWeight: 500,
+          marginBottom: '0.875rem',
+        }}
+      >
+        {mod.tagline}
+      </p>
+
+      {/* Description */}
+      <p
+        className="module-desc"
+        style={{
+          fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+          fontSize: '0.875rem',
+          lineHeight: 1.65,
+          flex: 1,
+        }}
+      >
+        {mod.description}
+      </p>
+
+      {/* Flèche */}
+      <p className="module-arrow" style={{ fontSize: '1rem', marginTop: '1.25rem' }}>
+        →
+      </p>
+    </article>
+  )
+}
+
 export function Modules() {
   return (
     <section
@@ -80,15 +192,10 @@ export function Modules() {
       >
         <RevealSection>
           <Eyebrow className="mb-8">─── 02 / MODULES</Eyebrow>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-12">
             <h2
               className="font-display font-bold text-ink"
-              style={{
-                fontSize: 'clamp(2rem, 3.5vw, 3rem)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.01em',
-              }}
+              style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
             >
               Les outils dont vous avez besoin, réunis en modules simples et parfaitement intégrés.
             </h2>
@@ -99,190 +206,30 @@ export function Modules() {
           </div>
         </RevealSection>
 
-        {/* ─── 7 modules en grille ─── */}
+        {/* ─── Grille 3 colonnes — séparateur beige entre cartes vertes ─── */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px"
-          style={{ backgroundColor: 'var(--color-stone-200)' }}
+          style={{ backgroundColor: '#F2EFE9' }}
         >
           {modules.slice(0, 6).map((mod, i) => (
-            <RevealSection key={mod.num} delay={i * 60}>
-              <article
-                className="module-card h-full"
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  padding: 'clamp(1.5rem, 3vw, 2rem)',
-                  border: '1px solid transparent',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                {/* Status + numéro */}
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-start',
-                    marginBottom: '1rem',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'clamp(2rem, 4vw, 3rem)',
-                      lineHeight: 1,
-                      letterSpacing: '-0.02em',
-                      color: 'var(--color-accent)',
-                    }}
-                  >
-                    {mod.roman}
-                  </span>
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
-                      fontSize: '0.5625rem',
-                      letterSpacing: '0.12em',
-                      color: 'var(--color-muted)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.35rem',
-                      paddingTop: '0.25rem',
-                    }}
-                  >
-                    <span
-                      style={{
-                        width: '5px',
-                        height: '5px',
-                        borderRadius: '50%',
-                        backgroundColor: 'var(--color-accent)',
-                        flexShrink: 0,
-                        display: 'inline-block',
-                      }}
-                    />
-                    PILOTE
-                  </span>
-                </div>
-
-                {/* Nom + tagline */}
-                <h3
-                  className="font-display font-bold text-ink"
-                  style={{ fontSize: '1.125rem', lineHeight: 1.25, marginBottom: '0.375rem' }}
-                >
-                  {mod.name}
-                </h3>
-                <p
-                  className="font-body text-muted"
-                  style={{ fontSize: '0.8125rem', fontWeight: 500, marginBottom: '0.875rem' }}
-                >
-                  {mod.tagline}
-                </p>
-
-                {/* Description */}
-                <p
-                  className="font-body text-ink-2"
-                  style={{ fontSize: '0.875rem', lineHeight: 1.65, flex: 1 }}
-                >
-                  {mod.description}
-                </p>
-
-                {/* Flèche */}
-                <p
-                  className="text-muted"
-                  style={{ fontSize: '1rem', marginTop: '1.25rem' }}
-                >
-                  →
-                </p>
-              </article>
+            <RevealSection key={mod.num} delay={i * 50}>
+              <ModuleCard mod={mod} />
             </RevealSection>
           ))}
         </div>
 
-        {/* Module VII — centré */}
+        {/* ─── Module VII — centré ─── */}
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px mt-px"
-          style={{ backgroundColor: 'var(--color-stone-200)' }}
+          style={{ backgroundColor: '#F2EFE9' }}
         >
-          <div style={{ backgroundColor: 'var(--color-paper)' }} aria-hidden="true" />
+          <div style={{ backgroundColor: '#F2EFE9', minHeight: '8px' }} aria-hidden="true" />
           {modules.slice(6).map((mod, i) => (
-            <RevealSection key={mod.num} delay={i * 60}>
-              <article
-                className="module-card h-full"
-                style={{
-                  backgroundColor: '#FFFFFF',
-                  padding: 'clamp(1.5rem, 3vw, 2rem)',
-                  border: '1px solid transparent',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'flex-start',
-                    marginBottom: '1rem',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
-                      fontWeight: 700,
-                      fontSize: 'clamp(2rem, 4vw, 3rem)',
-                      lineHeight: 1,
-                      letterSpacing: '-0.02em',
-                      color: 'var(--color-accent)',
-                    }}
-                  >
-                    {mod.roman}
-                  </span>
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
-                      fontSize: '0.5625rem',
-                      letterSpacing: '0.12em',
-                      color: 'var(--color-muted)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '0.35rem',
-                      paddingTop: '0.25rem',
-                    }}
-                  >
-                    <span
-                      style={{
-                        width: '5px',
-                        height: '5px',
-                        borderRadius: '50%',
-                        backgroundColor: 'var(--color-accent)',
-                        flexShrink: 0,
-                        display: 'inline-block',
-                      }}
-                    />
-                    PILOTE
-                  </span>
-                </div>
-                <h3
-                  className="font-display font-bold text-ink"
-                  style={{ fontSize: '1.125rem', lineHeight: 1.25, marginBottom: '0.375rem' }}
-                >
-                  {mod.name}
-                </h3>
-                <p
-                  className="font-body text-muted"
-                  style={{ fontSize: '0.8125rem', fontWeight: 500, marginBottom: '0.875rem' }}
-                >
-                  {mod.tagline}
-                </p>
-                <p
-                  className="font-body text-ink-2"
-                  style={{ fontSize: '0.875rem', lineHeight: 1.65, flex: 1 }}
-                >
-                  {mod.description}
-                </p>
-                <p className="text-muted" style={{ fontSize: '1rem', marginTop: '1.25rem' }}>→</p>
-              </article>
+            <RevealSection key={mod.num} delay={i * 50}>
+              <ModuleCard mod={mod} />
             </RevealSection>
           ))}
-          <div style={{ backgroundColor: 'var(--color-paper)' }} aria-hidden="true" />
+          <div style={{ backgroundColor: '#F2EFE9', minHeight: '8px' }} aria-hidden="true" />
         </div>
       </div>
     </section>

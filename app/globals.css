@@ -99,25 +99,54 @@ body {
   border-radius: 2px;
 }
 
-/* ─── Card hover ─────────────────────────────────── */
+/* ─── Module cards ───────────────────────────────── */
+/* Normal : fond pine, chiffres orange, texte blanc */
 .module-card {
-  transition:
-    transform 260ms cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 260ms ease;
+  background-color: #0D2C22;
+  transition: background-color 260ms cubic-bezier(0.16, 1, 0.3, 1),
+              transform       260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.module-numeral {
+  color: #FF5B00;
+  transition: color 260ms ease;
+}
+.module-status-dot {
+  background-color: #FF5B00;
+  transition: background-color 260ms ease;
+}
+.module-status-text {
+  color: rgba(255, 255, 255, 0.42);
+  transition: color 260ms ease;
+}
+.module-title {
+  color: #FFFFFF;
+  transition: color 260ms ease;
+}
+.module-tagline {
+  color: rgba(255, 255, 255, 0.52);
+  transition: color 260ms ease;
+}
+.module-desc {
+  color: rgba(255, 255, 255, 0.72);
+  transition: color 260ms ease;
+}
+.module-arrow {
+  color: rgba(255, 255, 255, 0.38);
+  transition: color 260ms ease;
 }
 
-/* Hover : remplissage bleu condere + texte blanc via surcharge des variables */
+/* Hover : fond orange, chiffres pine, texte noir */
 .module-card:hover {
-  background-color: #1A2BD4;
-  border-color: #1A2BD4;
+  background-color: #FF5B00;
   transform: translateY(-4px);
-  /* Surcharge des tokens — cascade vers tous les enfants */
-  --color-ink:   #FFFFFF;
-  --color-ink-2: rgba(255, 255, 255, 0.82);
-  --color-muted: rgba(255, 255, 255, 0.55);
-  --color-accent: #FFFFFF;   /* numeral romain orange → blanc sur fond bleu */
 }
+.module-card:hover .module-numeral      { color: #0D2C22; }
+.module-card:hover .module-status-dot   { background-color: #0D2C22; }
+.module-card:hover .module-status-text  { color: rgba(13, 44, 34, 0.55); }
+.module-card:hover .module-title        { color: #0D2C22; }
+.module-card:hover .module-tagline      { color: rgba(13, 44, 34, 0.62); }
+.module-card:hover .module-desc         { color: rgba(13, 44, 34, 0.82); }
+.module-card:hover .module-arrow        { color: rgba(13, 44, 34, 0.48); }
 
 /* ─── Hero animations ───────────────────────────── */
 @keyframes blink {
