@@ -101,12 +101,17 @@ body {
 
 /* ─── Card hover ─────────────────────────────────── */
 .module-card {
-  transition: transform 200ms ease, border-color 200ms ease;
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 220ms ease;
 }
 
 .module-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-ink);
+  transform: translateY(-3px);
+  /* Orange left-border accent without shifting layout */
+  box-shadow: inset 3px 0 0 var(--color-accent);
+  background-color: var(--color-paper-2);
 }
 
 /* ─── Hero animations ───────────────────────────── */

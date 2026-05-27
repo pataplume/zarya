@@ -1,91 +1,243 @@
-import Link from 'next/link'
+import { Fragment } from 'react'
+
+const sectionLabel = {
+  fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
+  fontWeight: 700,
+  fontSize: '0.625rem',
+  letterSpacing: '0.18em',
+  textTransform: 'uppercase' as const,
+  color: '#FF5B00',
+  marginBottom: '1.5rem',
+  display: 'block',
+}
+
+const linkBase = {
+  fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+  fontSize: '0.9375rem',
+  color: 'rgba(255,255,255,0.72)',
+  textDecoration: 'none',
+  display: 'block',
+  lineHeight: 1,
+}
+
+const dtStyle = {
+  color: 'rgba(255,255,255,0.36)',
+  letterSpacing: '0.08em',
+  whiteSpace: 'nowrap' as const,
+}
+
+const ddStyle = {
+  color: 'rgba(255,255,255,0.70)',
+  letterSpacing: '0.04em',
+  margin: 0,
+}
+
+const metaRows: [string, string][] = [
+  ['COORDONNÉES', '46.20740° N, 6.15591° E'],
+  ['SITE',        'GENÈVE / SUISSE'],
+  ['JURIDICTION', 'CH · EU'],
+  ['PROTOCOLE',   'V.01 — PILOTE'],
+  ['DERNIÈRE MAJ','27.05.2026'],
+]
+
+const navLinks = [
+  { href: '#modules',  label: 'Modules' },
+  { href: '#securite', label: 'Sécurité' },
+  { href: '#faq',      label: 'FAQ' },
+  { href: '#contact',  label: 'Contact' },
+]
+
+const externalLinks = [
+  { href: 'https://condere.ch/', label: 'Condere ↗' },
+  { href: 'https://www.linkedin.com/company/condere-ch', label: 'LinkedIn ↗' },
+]
 
 export function Footer() {
   return (
-    <footer className="dark-section" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+    <footer
+      className="dark-section"
+      style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+    >
       <div
-        className="mx-auto w-full"
         style={{
           maxWidth: '1240px',
+          margin: '0 auto',
           paddingLeft: 'clamp(1.5rem, 5vw, 4rem)',
           paddingRight: 'clamp(1.5rem, 5vw, 4rem)',
-          paddingTop: '4rem',
-          paddingBottom: '4rem',
+          paddingTop: 'clamp(3.5rem, 7vw, 5.5rem)',
+          paddingBottom: 'clamp(3.5rem, 7vw, 5.5rem)',
         }}
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Colonne 1 — Identité */}
+        {/* ─── 3-column grid ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-14 lg:gap-20 mb-16">
+
+          {/* ── 01. ÉTYMOLOGIE ── */}
           <div>
+            <span style={sectionLabel}>01. ÉTYMOLOGIE</span>
             <p
-              className="font-display font-[500] text-ink"
-              style={{ fontSize: '1.25rem', letterSpacing: '-0.01em' }}
+              style={{
+                fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+                fontStyle: 'italic',
+                fontWeight: 700,
+                fontSize: '1.0625rem',
+                color: '#FFFFFF',
+                marginBottom: '0.875rem',
+                lineHeight: 1.35,
+              }}
             >
-              Zarya
+              Zarya, de « Заря » — l&apos;aube
             </p>
-            <p className="font-body text-body text-ink-2 mt-3 mb-1">
-              Made with love and robots in Geneva
+            <p
+              style={{
+                fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+                fontSize: '0.875rem',
+                lineHeight: 1.7,
+                color: 'rgba(255,255,255,0.65)',
+                marginBottom: '1.5rem',
+                maxWidth: '36ch',
+              }}
+            >
+              Nom du premier module de la Station Spatiale Internationale (ISS),
+              Zarya symbolise le point de départ, la connexion entre systèmes et
+              l&apos;infrastructure sur laquelle tout le reste se construit.
             </p>
-            <p className="font-body text-caption text-muted mb-2">
-              Zarya est un module de Condere — Swiss based &amp; Swiss made
-            </p>
-            <p className="font-code text-caption text-muted" style={{ fontFeatureSettings: '"tnum"' }}>
-              v0.1 — pilote
+            <p
+              style={{
+                fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
+                fontStyle: 'italic',
+                fontSize: '0.8125rem',
+                lineHeight: 1.55,
+                color: 'rgba(255,255,255,0.38)',
+              }}
+            >
+              — « lumière de l&apos;aube », « commencement »
             </p>
           </div>
 
-          {/* Colonne 2 — Pages */}
+          {/* ── 02. SYSTÈME ── */}
           <div>
-            <p className="font-display font-[500] text-muted text-[0.7rem] uppercase tracking-[0.14em] mb-4">
-              Pages
-            </p>
-            <nav aria-label="Pages légales">
-              <ul className="space-y-2">
-                {[
-                  { href: '/mentions-legales', label: 'Mentions légales' },
-                  { href: '/confidentialite', label: 'Politique de confidentialité' },
-                  { href: '/confidentialite#sous-traitants', label: 'Sous-traitants' },
-                  { href: 'mailto:contact@condere.ch', label: 'Contact' },
-                ].map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="font-body text-body text-ink-2 border-b border-transparent transition-colors duration-150 hover:text-ink hover:border-stone-300 pb-px"
+            <span style={sectionLabel}>02. SYSTÈME</span>
+            <dl
+              style={{
+                fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+                fontSize: '0.6875rem',
+                lineHeight: 1,
+                display: 'grid',
+                gridTemplateColumns: 'auto 1fr',
+                rowGap: '0.875rem',
+                columnGap: '1.25rem',
+              }}
+            >
+              {metaRows.map(([k, v]) => (
+                <Fragment key={k}>
+                  <dt style={dtStyle}>{k}</dt>
+                  <dd style={ddStyle}>{v}</dd>
+                </Fragment>
+              ))}
+              <Fragment key="statut">
+                <dt style={dtStyle}>STATUT</dt>
+                <dd
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: '#FF5B00',
+                    letterSpacing: '0.06em',
+                    margin: 0,
+                  }}
+                >
+                  <span className="hero-blink-dot" />
+                  ACTIF
+                </dd>
+              </Fragment>
+            </dl>
+          </div>
+
+          {/* ── 03. NAVIGATION ── */}
+          <div>
+            <span style={sectionLabel}>03. NAVIGATION</span>
+            <nav aria-label="Navigation Zarya">
+              <ul
+                style={{
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.875rem',
+                }}
+              >
+                {navLinks.map((item) => (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      style={linkBase}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.72)')}
                     >
-                      {link.label}
-                    </Link>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+                {/* Séparateur */}
+                <li
+                  aria-hidden="true"
+                  style={{
+                    borderTop: '1px solid rgba(255,255,255,0.09)',
+                    marginTop: '0.25rem',
+                    paddingTop: '0.25rem',
+                  }}
+                />
+                {externalLinks.map((item) => (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={linkBase}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.72)')}
+                    >
+                      {item.label}
+                    </a>
                   </li>
                 ))}
               </ul>
             </nav>
           </div>
-
-          {/* Colonne 3 — Contact */}
-          <div>
-            <p className="font-display font-[500] text-muted text-[0.7rem] uppercase tracking-[0.14em] mb-4">
-              Contact
-            </p>
-            <a
-              href="mailto:contact@condere.ch"
-              className="font-body text-body text-ink-2 border-b border-stone-300 pb-px transition-colors duration-150 hover:text-ink hover:border-ink"
-            >
-              contact@condere.ch
-            </a>
-            <p className="font-body text-caption text-muted mt-4">
-              LinkedIn — à venir
-            </p>
-          </div>
         </div>
 
-        {/* Sous-footer */}
+        {/* ─── Sous-footer ─── */}
         <div
-          className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pt-8"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.09)' }}
+          style={{
+            borderTop: '1px solid rgba(255,255,255,0.07)',
+            paddingTop: '1.75rem',
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '0.75rem',
+          }}
         >
-          <p className="font-body text-caption text-muted">
-            &copy; 2026 Zarya. Tous droits réservés.
+          <p
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+              fontSize: '0.625rem',
+              letterSpacing: '0.08em',
+              color: 'rgba(255,255,255,0.28)',
+            }}
+          >
+            © 2026 ZARYA BY CONDERE — TOUS DROITS RÉSERVÉS
           </p>
-          <p className="font-body text-caption text-muted">
-            Français (Suisse)
+          <p
+            style={{
+              fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+              fontSize: '0.625rem',
+              letterSpacing: '0.08em',
+              color: 'rgba(255,255,255,0.28)',
+            }}
+          >
+            nLPD · RGPD · FRANÇAIS (SUISSE)
           </p>
         </div>
       </div>

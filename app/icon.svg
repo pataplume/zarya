@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 417 417" fill="#FF5B00">
+  <!-- Barre horizontale centrale -->
+  <rect x="62.5" y="191.667" width="291.667" height="33.333"/>
+  <!-- Paires de barres verticales — haut gauche -->
+  <rect x="62.5"   y="41.667" width="33.333" height="116.667"/>
+  <rect x="112.5"  y="41.667" width="33.333" height="116.667"/>
+  <!-- Paires de barres verticales — bas gauche -->
+  <rect x="62.5"   y="258.333" width="33.333" height="116.667"/>
+  <rect x="112.5"  y="258.333" width="33.333" height="116.667"/>
+  <!-- Paires de barres verticales — haut droite -->
+  <rect x="270.833" y="41.667"  width="33.333" height="116.667"/>
+  <rect x="320.833" y="41.667"  width="33.333" height="116.667"/>
+  <!-- Paires de barres verticales — bas droite -->
+  <rect x="270.833" y="258.333" width="33.333" height="116.667"/>
+  <rect x="320.833" y="258.333" width="33.333" height="116.667"/>
+  <!-- Carré central -->
+  <path d="M241.667,162.5l0,91.667c0,2.3 -1.867,4.167 -4.167,4.167l-58.333,0c-2.3,0 -4.167,-1.867 -4.167,-4.167l0,-91.667c0,-2.3 1.867,-4.167 4.167,-4.167l58.333,0c2.3,0 4.167,1.867 4.167,4.167Z"/>
+</svg>
