@@ -14,7 +14,6 @@ const sectionLabel = {
 const linkBase = {
   fontFamily: 'var(--font-plus-jakarta), system-ui, sans-serif',
   fontSize: '0.9375rem',
-  color: 'rgba(255,255,255,0.72)',
   textDecoration: 'none',
   display: 'block',
   lineHeight: 1,
@@ -169,12 +168,7 @@ export function Footer() {
               >
                 {navLinks.map((item) => (
                   <li key={item.href}>
-                    <a
-                      href={item.href}
-                      style={linkBase}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.72)')}
-                    >
+                    <a href={item.href} className="footer-link" style={linkBase}>
                       {item.label}
                     </a>
                   </li>
@@ -194,9 +188,8 @@ export function Footer() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="footer-link"
                       style={linkBase}
-                      onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
-                      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.72)')}
                     >
                       {item.label}
                     </a>

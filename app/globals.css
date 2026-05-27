@@ -149,6 +149,15 @@ body {
   animation: hero-reveal-lr 1.2s ease-out 0.15s forwards;
 }
 
+/* ─── Footer links ──────────────────────────────── */
+.footer-link {
+  color: rgba(255, 255, 255, 0.72);
+  transition: color 150ms ease;
+}
+.footer-link:hover {
+  color: #FFFFFF;
+}
+
 /* ─── Reduced Motion ─────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *,
