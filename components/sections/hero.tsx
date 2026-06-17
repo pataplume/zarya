@@ -134,7 +134,7 @@ export function Hero() {
             textTransform: 'uppercase',
           }}
         >
-          ZARYA.
+          ZARYA<span style={{ color: '#1A2BD4' }}>.</span>
         </h1>
 
         {/* Subtitle + CTA row */}
