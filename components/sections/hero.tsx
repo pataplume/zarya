@@ -159,7 +159,7 @@ export function Hero() {
           >
             L&apos;intelligence artificielle pour les fiduciaires suisses.
             <br />
-            Compatible Bexio, Crésus, Winbiz, Abacus, Odoo.
+            Compatible Bexio, Winbiz, Odoo et bien d&apos;autres.
           </p>
 
           <a
