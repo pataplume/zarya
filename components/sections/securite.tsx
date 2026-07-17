@@ -20,7 +20,16 @@ const guarantees = [
     label: 'CONFORMITÉ',
     items: [
       'Conforme à la nLPD suisse et au RGPD européen.',
-      'Registre des sous-traitants accessible publiquement et DPA disponible sur demande.',
+      <>
+        Registre des sous-traitants{' '}
+        <a
+          href="/mentions-legales#sous-traitants"
+          className="border-b border-stone-300 pb-px hover:border-ink hover:text-ink transition-colors duration-150"
+        >
+          accessible publiquement
+        </a>{' '}
+        et DPA disponible sur demande.
+      </>,
     ],
   },
   {
@@ -86,8 +95,8 @@ export function Securite() {
                       {g.label}
                     </dt>
                     <dd>
-                      {g.items.map((item) => (
-                        <p key={item} className="font-body text-body text-ink-2 leading-[1.6]">
+                      {g.items.map((item, i) => (
+                        <p key={i} className="font-body text-body text-ink-2 leading-[1.6]">
                           {item}
                         </p>
                       ))}

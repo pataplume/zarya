@@ -12,7 +12,20 @@ const questions = [
   },
   {
     q: "Qui voit nos données ?",
-    r: "Vous et vos collaborateurs uniquement. Ni Condere ni les sociétés tierces (traitement IA, hébergement) n'ont accès à vos données. Liste complète des sous-traitants publiée dans nos mentions légales.",
+    r: (
+      <>
+        Vous et vos collaborateurs uniquement. Ni Condere ni les sociétés tierces (traitement IA,
+        hébergement) n&apos;ont accès à vos données. Liste complète des sous-traitants publiée dans
+        nos{' '}
+        <a
+          href="/mentions-legales#sous-traitants"
+          className="border-b border-stone-300 pb-px hover:border-ink hover:text-ink transition-colors duration-150"
+        >
+          mentions légales
+        </a>
+        .
+      </>
+    ),
   },
   {
     q: "Et si on n'est pas sur Microsoft 365 ?",
