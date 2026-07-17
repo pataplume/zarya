@@ -4,11 +4,11 @@ import { RevealSection } from '@/components/RevealSection'
 const questions = [
   {
     q: "Zarya remplace-t-il Bexio ou Topal ?",
-    r: "Non. Zarya s'installe en couche au-dessus. Vous gardez votre logiciel comptable, vos comptes, votre méthode. Zarya pré-saisit les écritures et vous les pousse dans votre outil habituel après validation.",
+    r: "Non. Zarya s'installe en couche au-dessus. Vous gardez votre logiciel comptable, vos comptes, votre méthode. Zarya extrait et valide les données, puis les exporte vers votre outil habituel — CSV/Excel aujourd'hui, connecteurs natifs Bexio, Crésus ou WinBIZ sur la feuille de route.",
   },
   {
     q: "Que se passe-t-il si l'IA se trompe ?",
-    r: "Chaque écriture est validée par un humain avant d'être poussée dans votre comptabilité. Aucune action irréversible n'est exécutée sans approbation. Quand Zarya n'est pas sûr, il escalade.",
+    r: "Chaque écriture est validée par un humain avant d'être exportée vers votre comptabilité. Aucune action irréversible n'est exécutée sans approbation. Quand Zarya n'est pas sûr, il escalade.",
   },
   {
     q: "Qui voit nos données ?",
