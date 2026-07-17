@@ -231,7 +231,7 @@ export function Contact() {
 
                 {/* Mention RGPD */}
                 <p className="font-body text-caption text-muted leading-[1.5] max-w-[52ch]">
-                  Vos données sont stockées à Frankfurt et utilisées uniquement pour vous recontacter
+                  Vos données sont stockées en Suisse (Zurich) et utilisées uniquement pour vous recontacter
                   au sujet du pilote. Vous pouvez demander leur suppression à tout moment.
                 </p>
               </form>

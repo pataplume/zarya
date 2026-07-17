@@ -5,14 +5,14 @@ const guarantees = [
   {
     label: 'HÉBERGEMENT',
     items: [
-      "Infrastructure localisée en Europe : IA et frontend hébergés à Frankfurt et Paris, backend en Suisse (Zurich).",
+      "Vos données sont hébergées et chiffrées en Suisse (Supabase, Zurich). Seule la couche applicative est servie depuis l'Union européenne (Vercel, Frankfurt) — aucune donnée hors Suisse / UE.",
       'Sauvegardes chiffrées, stockées dans une région distincte pour une résilience maximale.',
     ],
   },
   {
     label: 'INFÉRENCE IA',
     items: [
-      'Modèles exécutés sur des serveurs sécurisés en Allemagne.',
+      'IA souveraine : les modèles sont exécutés en Suisse, par Infomaniak AI Services.',
       "Aucune donnée n'est conservée après traitement (Zero Data Retention).",
     ],
   },
@@ -65,7 +65,7 @@ export function Securite() {
                   letterSpacing: '-0.01em',
                 }}
               >
-                Vos données restent en Europe.
+                Vos données sont hébergées en Suisse.
               </h2>
               <p className="font-body text-ink-2 text-body leading-[1.6] max-w-[52ch]">
                 Nous traitons des données fiduciaires — financières, juridiques, souvent sensibles
