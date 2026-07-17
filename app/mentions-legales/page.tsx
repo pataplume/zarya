@@ -84,9 +84,9 @@ export default function MentionsLegalesPage() {
               Éditeur du site
             </h2>
             <p>
-              Ce site et le service Zarya sont édités par Condere
-              {/* TODO founder : remplacer par la raison sociale exacte et le siège social */}
-              {' '}[À COMPLÉTER : raison sociale et siège].
+              Ce site et le service Zarya sont édités par CONDERE, société en cours de
+              création. Les présentes mentions seront complétées (forme juridique, IDE,
+              siège) dès l&apos;inscription au registre du commerce.
             </p>
             <p className="mt-2">1207 Genève, Suisse</p>
             <p className="mt-2">
