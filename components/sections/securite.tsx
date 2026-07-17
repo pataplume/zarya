@@ -26,7 +26,7 @@ const guarantees = [
   {
     label: 'ACCÈS & CONTRÔLE',
     items: [
-      'Authentification multi-facteurs (MFA).',
+      "Authentification multi-facteurs (MFA) — déploiement prévu avant l'ouverture commerciale.",
       'Journalisation complète de chaque action pour une traçabilité totale.',
       'Suppression intégrale des données à la résiliation.',
     ],
