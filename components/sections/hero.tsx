@@ -93,6 +93,7 @@ export function Hero() {
 
       {/* ─── Main content (bottom-anchored) ─── */}
       <div
+        className="hero-content"
         style={{
           width: '100%',
           maxWidth: '1240px',
@@ -122,11 +123,12 @@ export function Hero() {
 
         {/* ZARYA. — Syncopate, entirely orange, revealed from bottom */}
         <h1
-          className="hero-title-reveal"
+          className="hero-title hero-title-reveal"
           style={{
             fontFamily: 'var(--font-syncopate), system-ui, sans-serif',
             fontWeight: 700,
-            fontSize: 'clamp(3rem, 13.5vw, 18rem)',
+            /* fontSize géré par .hero-title (container query) — pas en inline,
+               sinon l'inline style écraserait la règle CSS */
             lineHeight: 0.88,
             letterSpacing: '-0.02em',
             color: '#FF5B00',
