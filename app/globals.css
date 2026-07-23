@@ -183,6 +183,21 @@ body {
   animation: hero-reveal-lr 1.2s ease-out 0.15s forwards;
 }
 
+/* ─── Hero title sizing ─────────────────────────── */
+/* Le conteneur est plafonné à 1240px : dimensionner le titre en vw le fait
+   déborder au-delà de cette largeur. On le dimensionne donc sur le conteneur. */
+.hero-content {
+  container-type: inline-size;
+}
+
+.hero-title {
+  /* Fallback si container queries indisponibles — volontairement conservateur */
+  font-size: clamp(2.75rem, 11vw, 13rem);
+  /* Syncopate « ZARYA. » ≈ 4.53em de large → 21cqw remplit ~95% du conteneur */
+  font-size: 21cqw;
+  white-space: nowrap;
+}
+
 /* ─── Navbar ────────────────────────────────────── */
 .nav-link {
   color: rgba(13, 44, 34, 0.55);
