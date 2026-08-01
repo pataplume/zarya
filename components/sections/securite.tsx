@@ -5,14 +5,14 @@ const guarantees = [
   {
     label: 'HÉBERGEMENT',
     items: [
-      "Infrastructure localisée en Europe : IA et frontend hébergés à Frankfurt et Paris, backend en Suisse (Zurich).",
+      "Vos données sont hébergées et chiffrées en Suisse (Supabase, Zurich). Seule la couche applicative est servie depuis l'Union européenne (Vercel, Frankfurt) — aucune donnée hors Suisse / UE.",
       'Sauvegardes chiffrées, stockées dans une région distincte pour une résilience maximale.',
     ],
   },
   {
     label: 'INFÉRENCE IA',
     items: [
-      'Modèles exécutés sur des serveurs sécurisés en Allemagne.',
+      'IA souveraine : les modèles sont exécutés en Suisse, par Infomaniak AI Services.',
       "Aucune donnée n'est conservée après traitement (Zero Data Retention).",
     ],
   },
@@ -20,13 +20,22 @@ const guarantees = [
     label: 'CONFORMITÉ',
     items: [
       'Conforme à la nLPD suisse et au RGPD européen.',
-      'Registre des sous-traitants accessible publiquement et DPA disponible sur demande.',
+      <>
+        Registre des sous-traitants{' '}
+        <a
+          href="/mentions-legales#sous-traitants"
+          className="border-b border-stone-300 pb-px hover:border-ink hover:text-ink transition-colors duration-150"
+        >
+          accessible publiquement
+        </a>{' '}
+        et DPA disponible sur demande.
+      </>,
     ],
   },
   {
     label: 'ACCÈS & CONTRÔLE',
     items: [
-      'Authentification multi-facteurs (MFA).',
+      "Authentification multi-facteurs (MFA) — déploiement prévu avant l'ouverture commerciale.",
       'Journalisation complète de chaque action pour une traçabilité totale.',
       'Suppression intégrale des données à la résiliation.',
     ],
@@ -65,7 +74,7 @@ export function Securite() {
                   letterSpacing: '-0.01em',
                 }}
               >
-                Vos données restent en Europe.
+                Vos données sont hébergées en Suisse.
               </h2>
               <p className="font-body text-ink-2 text-body leading-[1.6] max-w-[52ch]">
                 Nous traitons des données fiduciaires — financières, juridiques, souvent sensibles
@@ -86,8 +95,8 @@ export function Securite() {
                       {g.label}
                     </dt>
                     <dd>
-                      {g.items.map((item) => (
-                        <p key={item} className="font-body text-body text-ink-2 leading-[1.6]">
+                      {g.items.map((item, i) => (
+                        <p key={i} className="font-body text-body text-ink-2 leading-[1.6]">
                           {item}
                         </p>
                       ))}

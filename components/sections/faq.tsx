@@ -4,15 +4,28 @@ import { RevealSection } from '@/components/RevealSection'
 const questions = [
   {
     q: "Zarya remplace-t-il Bexio ou Topal ?",
-    r: "Non. Zarya s'installe en couche au-dessus. Vous gardez votre logiciel comptable, vos comptes, votre méthode. Zarya pré-saisit les écritures et vous les pousse dans votre outil habituel après validation.",
+    r: "Non. Zarya s'installe en couche au-dessus. Vous gardez votre logiciel comptable, vos comptes, votre méthode. Zarya extrait et valide les données, puis les exporte vers votre outil habituel — CSV/Excel aujourd'hui, connecteurs natifs Bexio, Crésus ou WinBIZ sur la feuille de route.",
   },
   {
     q: "Que se passe-t-il si l'IA se trompe ?",
-    r: "Chaque écriture est validée par un humain avant d'être poussée dans votre comptabilité. Aucune action irréversible n'est exécutée sans approbation. Quand Zarya n'est pas sûr, il escalade.",
+    r: "Chaque écriture est validée par un humain avant d'être exportée vers votre comptabilité. Aucune action irréversible n'est exécutée sans approbation. Quand Zarya n'est pas sûr, il escalade.",
   },
   {
     q: "Qui voit nos données ?",
-    r: "Vous et vos collaborateurs uniquement. Ni Condere ni les sociétés tierces (traitement IA, hébergement) n'ont accès à vos données. Liste complète des sous-traitants publiée dans nos mentions légales.",
+    r: (
+      <>
+        Vous et vos collaborateurs uniquement. Ni Condere ni les sociétés tierces (traitement IA,
+        hébergement) n&apos;ont accès à vos données. Liste complète des sous-traitants publiée dans
+        nos{' '}
+        <a
+          href="/mentions-legales#sous-traitants"
+          className="border-b border-stone-300 pb-px hover:border-ink hover:text-ink transition-colors duration-150"
+        >
+          mentions légales
+        </a>
+        .
+      </>
+    ),
   },
   {
     q: "Et si on n'est pas sur Microsoft 365 ?",

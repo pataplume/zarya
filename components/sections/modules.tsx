@@ -1,7 +1,17 @@
 import { Eyebrow } from '@/components/typography/Eyebrow'
 import { RevealSection } from '@/components/RevealSection'
 
-const modules = [
+type Module = {
+  roman: string
+  num: string
+  name: string
+  tagline: string
+  description: string
+  /** Module pas encore disponible dans le produit — badge « À venir » */
+  upcoming?: boolean
+}
+
+const modules: Module[] = [
   {
     roman: 'I.',
     num: '01',
@@ -47,6 +57,7 @@ const modules = [
     num: '06',
     name: 'Zarya Timesheet',
     tagline: 'Suivi du temps par mission',
+    upcoming: true,
     description:
       "Suivez précisément le temps passé par client et par mission. Visualisez votre charge de travail, optimisez votre rentabilité et assurez un suivi transparent de vos prestations.",
   },
@@ -93,35 +104,52 @@ function ModuleCard({ mod }: { mod: typeof modules[number] }) {
           {mod.roman}
         </span>
 
-        <span
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.35rem',
-            paddingTop: '0.3rem',
-          }}
-        >
+        {mod.upcoming ? (
           <span
-            className="module-status-dot"
-            style={{
-              width: '5px',
-              height: '5px',
-              borderRadius: '50%',
-              flexShrink: 0,
-              display: 'inline-block',
-            }}
-          />
-          <span
-            className="module-status-text"
+            className="module-badge-soon"
             style={{
               fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
               fontSize: '0.5625rem',
               letterSpacing: '0.12em',
+              padding: '0.3rem 0.65rem',
+              borderRadius: '999px',
+              whiteSpace: 'nowrap',
+              marginTop: '0.15rem',
             }}
           >
-            PILOTE
+            À VENIR
           </span>
-        </span>
+        ) : (
+          <span
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.35rem',
+              paddingTop: '0.3rem',
+            }}
+          >
+            <span
+              className="module-status-dot"
+              style={{
+                width: '5px',
+                height: '5px',
+                borderRadius: '50%',
+                flexShrink: 0,
+                display: 'inline-block',
+              }}
+            />
+            <span
+              className="module-status-text"
+              style={{
+                fontFamily: 'var(--font-jetbrains-mono), ui-monospace, monospace',
+                fontSize: '0.5625rem',
+                letterSpacing: '0.12em',
+              }}
+            >
+              PILOTE
+            </span>
+          </span>
+        )}
       </div>
 
       {/* Nom du module */}

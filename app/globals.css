@@ -134,6 +134,11 @@ body {
   color: rgba(255, 255, 255, 0.38);
   transition: color 260ms ease;
 }
+.module-badge-soon {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 260ms ease, border-color 260ms ease;
+}
 
 /* Hover : fond orange, chiffres pine, texte noir */
 .module-card:hover {
@@ -147,6 +152,7 @@ body {
 .module-card:hover .module-tagline      { color: rgba(13, 44, 34, 0.62); }
 .module-card:hover .module-desc         { color: rgba(13, 44, 34, 0.82); }
 .module-card:hover .module-arrow        { color: rgba(13, 44, 34, 0.48); }
+.module-card:hover .module-badge-soon   { color: rgba(13, 44, 34, 0.8); border-color: rgba(13, 44, 34, 0.55); }
 
 /* ─── Hero animations ───────────────────────────── */
 @keyframes blink {

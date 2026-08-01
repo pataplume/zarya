@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 }
 
 const sousTraitants = [
-  { nom: 'Anthropic via AWS Bedrock', fonction: 'Inférence IA', localisation: 'Frankfurt DE' },
   { nom: 'Supabase', fonction: 'Backend & base de données', localisation: 'Zurich CH' },
   { nom: 'Vercel', fonction: 'Hébergement frontend', localisation: 'Frankfurt DE' },
   { nom: 'Resend', fonction: 'Emails transactionnels', localisation: 'Ireland EU' },
@@ -82,8 +81,16 @@ export default function ConfidentialitePage() {
               Sous-traitants
             </h2>
             <p className="mb-6">
-              Les données peuvent transiter par les sous-processeurs suivants, soumis à des
-              garanties contractuelles (DPA) conformes au RGPD et à la nLPD suisse.
+              Les données du formulaire pilote peuvent transiter par les sous-processeurs suivants,
+              soumis à des garanties contractuelles (DPA) conformes au RGPD et à la nLPD suisse. Le
+              registre complet des sous-traitants du service Zarya est publié dans nos{' '}
+              <Link
+                href="/mentions-legales#sous-traitants"
+                className="border-b border-stone-300 pb-px hover:border-ink hover:text-ink transition-colors duration-150"
+              >
+                mentions légales
+              </Link>
+              .
             </p>
             <div className="overflow-x-auto">
               <table

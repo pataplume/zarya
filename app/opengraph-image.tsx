@@ -70,7 +70,7 @@ export default function OGImage() {
             borderTop: '1px solid #E5E2D8',
           }}
         >
-          {['Hébergement Frankfurt', '·', 'Conforme nLPD', '·', 'zarya.condere.ch'].map(
+          {['Données hébergées en Suisse', '·', 'Conforme nLPD', '·', 'zarya.condere.ch'].map(
             (item, i) => (
               <div
                 key={i}

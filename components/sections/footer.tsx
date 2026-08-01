@@ -36,7 +36,7 @@ const metaRows: [string, string][] = [
   ['SITE',        'GENÈVE / SUISSE'],
   ['JURIDICTION', 'CH · EU'],
   ['PROTOCOLE',   'V.01 — PILOTE'],
-  ['DERNIÈRE MAJ','27.05.2026'],
+  ['DERNIÈRE MAJ','17.07.2026'],
 ]
 
 const navLinks = [
@@ -44,6 +44,11 @@ const navLinks = [
   { href: '#securite', label: 'Sécurité' },
   { href: '#faq',      label: 'FAQ' },
   { href: '#contact',  label: 'Contact' },
+]
+
+const legalLinks = [
+  { href: '/mentions-legales', label: 'Mentions légales' },
+  { href: '/confidentialite', label: 'Confidentialité' },
 ]
 
 const externalLinks = [
@@ -167,6 +172,22 @@ export function Footer() {
                 }}
               >
                 {navLinks.map((item) => (
+                  <li key={item.href}>
+                    <a href={item.href} className="footer-link" style={linkBase}>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+                {/* Séparateur */}
+                <li
+                  aria-hidden="true"
+                  style={{
+                    borderTop: '1px solid rgba(255,255,255,0.09)',
+                    marginTop: '0.25rem',
+                    paddingTop: '0.25rem',
+                  }}
+                />
+                {legalLinks.map((item) => (
                   <li key={item.href}>
                     <a href={item.href} className="footer-link" style={linkBase}>
                       {item.label}
